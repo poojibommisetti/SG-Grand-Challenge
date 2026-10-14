@@ -24,7 +24,7 @@ def unprotected_q0_x_error_demo() -> None:
     """Prepare |0>, inject X, and read out the unprotected qubit."""
     q0 = qubit()
     x(q0)
-    output_bit = measure(q0)
+    output_bit = measure(q0).read()
     result("unprotected_bit", output_bit)
 
 
@@ -49,8 +49,8 @@ def bitflip_repetition_q0_x_error_demo() -> None:
     cx(q1, syndrome0)
     cx(q1, syndrome1)
     cx(q2, syndrome1)
-    s0 = measure(syndrome0)
-    s1 = measure(syndrome1)
+    s0 = measure(syndrome0).read()
+    s1 = measure(syndrome1).read()
     result("syndrome_s0", s0)
     result("syndrome_s1", s1)
 
@@ -67,7 +67,7 @@ def bitflip_repetition_q0_x_error_demo() -> None:
     # Decode and check the recovered logical data bit.
     cx(q0, q2)
     cx(q0, q1)
-    decoded_bit = measure(q0)
+    decoded_bit = measure(q0).read()
     result("decoded_bit", decoded_bit)
     discard(q1)
     discard(q2)

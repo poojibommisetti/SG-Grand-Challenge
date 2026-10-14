@@ -75,8 +75,8 @@ def _recover_bitflip(
     cx(d1, s0)
     cx(d1, s1)
     cx(d2, s1)
-    bit0 = measure(s0)
-    bit1 = measure(s1)
+    bit0 = measure(s0).read()
+    bit1 = measure(s1).read()
 
     # 10 -> X(d0), 11 -> X(d1), 01 -> X(d2), 00 -> no correction.
     if bit0:
@@ -98,7 +98,7 @@ def _decode_and_measure_logical(
     cx(d0, d2)
     cx(d0, d1)
     h(d0)
-    bit = measure(d0)
+    bit = measure(d0).read()
     discard(d1)
     discard(d2)
     return bit

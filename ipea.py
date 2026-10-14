@@ -242,7 +242,7 @@ def ipea_1bit_emulator_demo() -> None:
     prepare_ground_state(q0, q1, py(_theta_rad_for_ipea))
     _controlled_u_k0_for_ipea(ancilla, q0, q1)
     h(ancilla)
-    measured_bit = measure(ancilla)
+    measured_bit = measure(ancilla).read()
     result("ipea_ancilla", measured_bit)
     discard(q0)
     discard(q1)
@@ -375,7 +375,7 @@ def ipea_2bit_emulator_demo() -> None:
     h(ancilla_b2)
     _controlled_u_k1_for_ipea(ancilla_b2, q0, q1)
     h(ancilla_b2)
-    b2 = measure(ancilla_b2)
+    b2 = measure(ancilla_b2).read()
     result("ipea_b2", b2)
 
     # Measurement consumes its ancilla, so the next iteration allocates one.
@@ -386,7 +386,7 @@ def ipea_2bit_emulator_demo() -> None:
     if b2:
         rz(ancilla_b1, angle(py(_alpha_2bit_if_b2_one / math.pi)))
     h(ancilla_b1)
-    b1 = measure(ancilla_b1)
+    b1 = measure(ancilla_b1).read()
     result("ipea_b1", b1)
 
     # The system register is not measured.
@@ -565,7 +565,7 @@ def ipea_5bit_emulator_demo() -> None:
     h(ancilla4)
     _controlled_u_k4_for_ipea_5bit(ancilla4, q0, q1)
     h(ancilla4)
-    b5 = measure(ancilla4)
+    b5 = measure(ancilla4).read()
     result("b5", b5)
 
     ancilla3 = qubit()
@@ -574,7 +574,7 @@ def ipea_5bit_emulator_demo() -> None:
     if b5:
         rz(ancilla3, angle(py(phase_correction_angle(3, [1], 5) / math.pi)))
     h(ancilla3)
-    b4 = measure(ancilla3)
+    b4 = measure(ancilla3).read()
     result("b4", b4)
 
     ancilla2 = qubit()
@@ -585,7 +585,7 @@ def ipea_5bit_emulator_demo() -> None:
     if b4:
         rz(ancilla2, angle(py(phase_correction_angle(2, [0, 1], 5) / math.pi)))
     h(ancilla2)
-    b3 = measure(ancilla2)
+    b3 = measure(ancilla2).read()
     result("b3", b3)
 
     ancilla1 = qubit()
@@ -598,7 +598,7 @@ def ipea_5bit_emulator_demo() -> None:
     if b3:
         rz(ancilla1, angle(py(phase_correction_angle(1, [0, 0, 1], 5) / math.pi)))
     h(ancilla1)
-    b2 = measure(ancilla1)
+    b2 = measure(ancilla1).read()
     result("b2", b2)
 
     ancilla0 = qubit()
@@ -613,7 +613,7 @@ def ipea_5bit_emulator_demo() -> None:
     if b2:
         rz(ancilla0, angle(py(phase_correction_angle(0, [0, 0, 0, 1], 5) / math.pi)))
     h(ancilla0)
-    b1 = measure(ancilla0)
+    b1 = measure(ancilla0).read()
     result("b1", b1)
 
     # The system register is never measured.

@@ -41,7 +41,7 @@ def _measure_b5(system0: qubit, system1: qubit) -> bool:
     h(ancilla)
     _cu_k4(ancilla, system0, system1)
     h(ancilla)
-    return measure(ancilla)
+    return measure(ancilla).read()
 
 
 @guppy
@@ -52,7 +52,7 @@ def _measure_b4(system0: qubit, system1: qubit, b5: bool) -> bool:
     if b5:
         rz(ancilla, angle(py(phase_correction_angle(3, [1], 5) / math.pi)))
     h(ancilla)
-    return measure(ancilla)
+    return measure(ancilla).read()
 
 
 @guppy
@@ -65,7 +65,7 @@ def _measure_b3(system0: qubit, system1: qubit, b5: bool, b4: bool) -> bool:
     if b4:
         rz(ancilla, angle(py(phase_correction_angle(2, [0, 1], 5) / math.pi)))
     h(ancilla)
-    return measure(ancilla)
+    return measure(ancilla).read()
 
 
 @guppy
@@ -82,7 +82,7 @@ def _measure_b2(
     if b3:
         rz(ancilla, angle(py(phase_correction_angle(1, [0, 0, 1], 5) / math.pi)))
     h(ancilla)
-    return measure(ancilla)
+    return measure(ancilla).read()
 
 
 @guppy
@@ -101,7 +101,7 @@ def _measure_b1_ideal(
     if b2:
         rz(ancilla, angle(py(phase_correction_angle(0, [0, 0, 0, 1], 5) / math.pi)))
     h(ancilla)
-    return measure(ancilla)
+    return measure(ancilla).read()
 
 
 @guppy
@@ -121,7 +121,7 @@ def _measure_b1_x_fault(
     if b2:
         rz(ancilla, angle(py(phase_correction_angle(0, [0, 0, 0, 1], 5) / math.pi)))
     h(ancilla)
-    return measure(ancilla)
+    return measure(ancilla).read()
 
 
 @guppy
@@ -141,7 +141,7 @@ def _measure_b1_z_fault(
     if b2:
         rz(ancilla, angle(py(phase_correction_angle(0, [0, 0, 0, 1], 5) / math.pi)))
     h(ancilla)
-    return measure(ancilla)
+    return measure(ancilla).read()
 
 
 @guppy

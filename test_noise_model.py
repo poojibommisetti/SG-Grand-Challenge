@@ -136,8 +136,8 @@ def tiny_selene_noise_smoke() -> None:
     q1 = qubit()
     h(q0)
     cx(q0, q1)
-    m0 = measure(q0)
-    m1 = measure(q1)
+    m0 = measure(q0).read()
+    m1 = measure(q1).read()
     result("m0", m0)
     result("m1", m1)
 
