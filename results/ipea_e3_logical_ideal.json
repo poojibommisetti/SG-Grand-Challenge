@@ -1,0 +1,235 @@
+{
+  "label": "E3 logical IPEA ideal",
+  "full_five_bit_logical_ipea": true,
+  "execution_completed": true,
+  "validation_passed": true,
+  "ideal_distribution_checks_passed": true,
+  "noise_model_metadata": null,
+  "environment": {
+    "python": "3.11.9",
+    "guppylang": "0.21.16",
+    "selene-sim": "0.2.18",
+    "selene-core": "0.2.11",
+    "pytket": "2.18.3"
+  },
+  "settings": {
+    "shots": 5000,
+    "repeats": 1,
+    "seed": 20261003,
+    "n_processes": 8,
+    "energy_interval_hartree": [
+      -1.2,
+      -1.0
+    ],
+    "n_qubits_available": 7,
+    "peak_live_qubits": 7,
+    "simulator": "local Guppy/Selene Quest statevector emulator",
+    "fault_injection": null,
+    "capture_system_states": false
+  },
+  "compiled_modules": 1,
+  "iteration_k_order": [
+    4,
+    3,
+    2,
+    1,
+    0
+  ],
+  "measurement_order": [
+    "b5",
+    "b4",
+    "b3",
+    "b2",
+    "b1"
+  ],
+  "bitstring_convention": "acquisition is b5..b1; measured_bits_to_msb_first reverses it before phase reconstruction, matching ipea.py",
+  "exact_ground_energy_hartree": -1.1373060511988444,
+  "e0_state_file_energy_hartree": -1.1373060511988444,
+  "evolution_time": 3.4635067188751005,
+  "exact_ground_phase": 0.6269220080527413,
+  "reference_bits_msb_first": [
+    1,
+    0,
+    1,
+    0,
+    0
+  ],
+  "reference_phase": 0.625,
+  "expected_measurement_probabilities_descending_k": {
+    "00000": 4.239933052432383e-05,
+    "00001": 0.00023887167948956654,
+    "00010": 4.1977261067679635e-05,
+    "00011": 0.00025321553274070593,
+    "00100": 3.600928713320614e-05,
+    "00101": 0.9876289606025971,
+    "00110": 7.115665794798492e-05,
+    "00111": 7.289624647273635e-05,
+    "01000": 3.752412011629054e-05,
+    "01001": 0.0008911857360526673,
+    "01010": 5.166832493797395e-05,
+    "01011": 0.00011880140837505726,
+    "01100": 3.734427442835123e-05,
+    "01101": 0.0010062796630860348,
+    "01110": 0.00011458361518735165,
+    "01111": 5.250894322109703e-05,
+    "10000": 3.946728375879388e-05,
+    "10001": 0.0004108152054220254,
+    "10010": 4.599980951828223e-05,
+    "10011": 0.00016577134395015134,
+    "10100": 3.631538982182112e-05,
+    "10101": 0.004253667767046531,
+    "10110": 8.817186386810135e-05,
+    "10111": 6.0863755176537375e-05,
+    "11000": 3.640188185321273e-05,
+    "11001": 0.0033275775390813602,
+    "11010": 5.966919323311655e-05,
+    "11011": 9.08054136202227e-05,
+    "11100": 3.917917443526157e-05,
+    "11101": 0.0004448671265266618,
+    "11110": 0.00015844704906994278,
+    "11111": 4.6597520239880046e-05
+  },
+  "controlled_u_gate_counts_k4_to_k0": [
+    307,
+    314,
+    313,
+    305,
+    308
+  ],
+  "logical_recovery_syndromes": {
+    "k4_pre": {
+      "00": 5000
+    },
+    "k4_post": {
+      "00": 5000
+    },
+    "k3_pre": {
+      "00": 5000
+    },
+    "k3_post": {
+      "00": 5000
+    },
+    "k2_pre": {
+      "00": 5000
+    },
+    "k2_post": {
+      "00": 5000
+    },
+    "k1_pre": {
+      "00": 5000
+    },
+    "k1_post": {
+      "00": 5000
+    },
+    "k0_pre": {
+      "00": 5000
+    },
+    "k0_post": {
+      "00": 5000
+    }
+  },
+  "system_state_fidelities_after_each_iteration": null,
+  "measured_counts_descending_k": {
+    "00000": 0,
+    "00001": 0,
+    "00010": 0,
+    "00011": 0,
+    "00100": 0,
+    "00101": 4943,
+    "00110": 0,
+    "00111": 0,
+    "01000": 0,
+    "01001": 2,
+    "01010": 0,
+    "01011": 0,
+    "01100": 0,
+    "01101": 5,
+    "01110": 0,
+    "01111": 0,
+    "10000": 0,
+    "10001": 0,
+    "10010": 2,
+    "10011": 0,
+    "10100": 0,
+    "10101": 22,
+    "10110": 0,
+    "10111": 0,
+    "11000": 0,
+    "11001": 21,
+    "11010": 0,
+    "11011": 0,
+    "11100": 0,
+    "11101": 2,
+    "11110": 3,
+    "11111": 0
+  },
+  "measured_counts_msb_first": {
+    "01001": 2,
+    "01111": 3,
+    "10010": 2,
+    "10011": 21,
+    "10100": 4943,
+    "10101": 22,
+    "10110": 5,
+    "10111": 2
+  },
+  "reconstructed_phase_counts": {
+    "0.28125": 2,
+    "0.46875": 3,
+    "0.56250": 2,
+    "0.59375": 21,
+    "0.62500": 4943,
+    "0.65625": 22,
+    "0.68750": 5,
+    "0.71875": 2
+  },
+  "energy_distribution_hartree": {
+    "-1.020437383888": 2,
+    "-1.077128349660": 21,
+    "-1.133819315431": 4943,
+    "-1.190510281203": 22
+  },
+  "unresolved_shots_outside_energy_interval": 12,
+  "modal_measurement_descending_k": "00101",
+  "modal_bits_msb_first": "10100",
+  "modal_frequency": 4943,
+  "modal_probability": 0.9886,
+  "modal_phase": 0.625,
+  "modal_energy_hartree": -1.1338193154314637,
+  "modal_absolute_energy_error_hartree": 0.0034867357673806776,
+  "within_ideal_distribution_tolerance": true,
+  "phase_resolution_check": true,
+  "syndrome_counts_by_iteration_and_stage": {
+    "k4_pre": {
+      "00": 5000
+    },
+    "k4_post": {
+      "00": 5000
+    },
+    "k3_pre": {
+      "00": 5000
+    },
+    "k3_post": {
+      "00": 5000
+    },
+    "k2_pre": {
+      "00": 5000
+    },
+    "k2_post": {
+      "00": 5000
+    },
+    "k1_pre": {
+      "00": 5000
+    },
+    "k1_post": {
+      "00": 5000
+    },
+    "k0_pre": {
+      "00": 5000
+    },
+    "k0_post": {
+      "00": 5000
+    }
+  },
+  "modal_absolute_energy_error_vs_e0_hartree": 0.0034867357673806776
+}

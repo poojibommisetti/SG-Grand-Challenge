@@ -1,0 +1,137 @@
+{
+  "recorded_at_utc": "2026-10-12T08:55:59.836283+00:00",
+  "experiment": "three-qubit bit-flip repetition-code component with deterministic injected X(q0)",
+  "status": "component demonstration only; no H2 system register or IPEA energy estimate",
+  "environment": {
+    "guppylang": "0.21.16",
+    "selene-sim": "0.2.18",
+    "selene-core": "0.2.11",
+    "pytket": "2.18.3"
+  },
+  "settings": {
+    "shots_per_circuit": 1000,
+    "repeats_per_condition": 1,
+    "seed": 20261004,
+    "n_processes": 8,
+    "simulator": "Selene local Quest statevector emulator"
+  },
+  "ideal": {
+    "experiment": "single injected X on q0; bit-flip repetition component only",
+    "full_logical_ipea": false,
+    "shots_per_circuit": 1000,
+    "repeats": 1,
+    "seed": 20261004,
+    "n_processes": 8,
+    "physical_qubits": {
+      "unprotected_probe": 1,
+      "encoded_peak": 5
+    },
+    "compiled_modules": {
+      "unprotected": 1,
+      "encoded": 1
+    },
+    "noise_model_metadata": null,
+    "expected_ideal": {
+      "unprotected_bit": 1,
+      "encoded_syndrome_s0_s1": "10",
+      "encoded_decoded_bit": 0
+    },
+    "unprotected_counts": {
+      "1": 1000
+    },
+    "encoded_syndrome_counts_s0_s1": {
+      "10": 1000
+    },
+    "encoded_decoded_counts": {
+      "0": 1000
+    },
+    "encoded_joint_counts_syndrome_then_decoded": {
+      "10:0": 1000
+    },
+    "encoded_recovery_success_probability": 1.0
+  },
+  "noisy": {
+    "experiment": "single injected X on q0; bit-flip repetition component only",
+    "full_logical_ipea": false,
+    "shots_per_circuit": 1000,
+    "repeats": 1,
+    "seed": 20261004,
+    "n_processes": 8,
+    "physical_qubits": {
+      "unprotected_probe": 1,
+      "encoded_peak": 5
+    },
+    "compiled_modules": {
+      "unprotected": 1,
+      "encoded": 1
+    },
+    "noise_model_metadata": {
+      "model_label": "illustrative_selene_depolarizing_v1",
+      "parameters": {
+        "p_1q": 1e-05,
+        "p_2q": 1e-06,
+        "p_meas": 0.01,
+        "p_init": 0.001
+      },
+      "parameter_provenance": {
+        "description": "Quantinuum Selene README, Usage examples / Using Selene with HUGR and Guppy",
+        "source_url": "https://github.com/Quantinuum/selene#usage-examples"
+      },
+      "assumptions": [
+        "The four values are illustrative Selene per-operation probabilities, not calibrated Quantinuum H2 hardware parameters.",
+        "The bundled model uses stochastic Pauli gate errors, symmetric measurement-result flips, and X errors after reset.",
+        "This model does not represent T1/T2, idle-time errors, leakage, or measurement crosstalk."
+      ],
+      "limitations": [
+        "Illustrative benchmark only; not calibrated to H2 hardware.",
+        "No T1/T2, idle-time, leakage, or crosstalk channel."
+      ],
+      "package_versions": {
+        "guppylang": "0.21.16",
+        "selene-sim": "0.2.18",
+        "selene-core": "0.2.11"
+      },
+      "random_seed": 20261004,
+      "shots": 1000,
+      "repeats": 1,
+      "execution_settings": {
+        "backend": "local Guppy/Selene emulator",
+        "simulator": "Quest",
+        "n_qubits": 5
+      }
+    },
+    "expected_ideal": {
+      "unprotected_bit": 1,
+      "encoded_syndrome_s0_s1": "10",
+      "encoded_decoded_bit": 0
+    },
+    "unprotected_counts": {
+      "0": 19,
+      "1": 981
+    },
+    "encoded_syndrome_counts_s0_s1": {
+      "00": 8,
+      "01": 1,
+      "10": 982,
+      "11": 9
+    },
+    "encoded_decoded_counts": {
+      "0": 972,
+      "1": 28
+    },
+    "encoded_joint_counts_syndrome_then_decoded": {
+      "00:1": 8,
+      "01:1": 1,
+      "10:0": 972,
+      "10:1": 10,
+      "11:1": 9
+    },
+    "encoded_recovery_success_probability": 0.972
+  },
+  "interpretation_limits": [
+    "This tests correction of one known physical X error on code data q0.",
+    "It is not a logical controlled-U or QEC-protected IPEA result.",
+    "The code does not correct Z errors, multiple data errors, or syndrome measurement faults.",
+    "The illustrative noise parameters are not calibrated to Quantinuum H2 hardware."
+  ]
+}

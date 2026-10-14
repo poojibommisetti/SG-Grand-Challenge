@@ -1,0 +1,30 @@
+{
+  "coefficient_source": "own derivation (hamiltonian.json)",
+  "coefficients_hartree": {
+    "I": -0.3322371935093348,
+    "Z0": 0.39802446432334593,
+    "Z1": 0.398024464323346,
+    "Z0 Z1": 0.011281049421144163,
+    "X0 X1": 0.1809233927385484
+  },
+  "full_spectrum_hartree": [
+    -1.1373060511988444,
+    -0.5244416356690274,
+    -0.16259485019193054,
+    0.49539376302246313
+  ],
+  "E0_hartree": -1.1373060511988444,
+  "ground_state_vector_real": [
+    0.11150781697588753,
+    0.0,
+    0.0,
+    -0.9937635567645214
+  ],
+  "ground_state_vector_imag": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "method": "numpy.linalg.eigh exact diagonalization of 4x4 qubit Hamiltonian"
+}

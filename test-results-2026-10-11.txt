@@ -1,0 +1,51 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.1.1, pluggy-1.6.0 -- C:\SG-Grand-Challenge\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\SG-Grand-Challenge
+collecting ... collected 37 items
+
+test_ipea.py::test_phase_sign_uses_project_convention PASSED             [  2%]
+test_ipea.py::test_phase_wraps_negative_and_above_one_raw_values[5.0] PASSED [  5%]
+test_ipea.py::test_phase_wraps_negative_and_above_one_raw_values[-5.0] PASSED [  8%]
+test_ipea.py::test_phase_to_bits_extracts_msb_first[0.625-expected0] PASSED [ 10%]
+test_ipea.py::test_phase_to_bits_extracts_msb_first[0.40625-expected1] PASSED [ 13%]
+test_ipea.py::test_bits_to_phase_reconstructs_fraction PASSED            [ 16%]
+test_ipea.py::test_exact_n_bit_phases_round_trip[bits0] PASSED           [ 18%]
+test_ipea.py::test_exact_n_bit_phases_round_trip[bits1] PASSED           [ 21%]
+test_ipea.py::test_exact_n_bit_phases_round_trip[bits2] PASSED           [ 24%]
+test_ipea.py::test_measurement_order_reverses_to_msb_first PASSED        [ 27%]
+test_ipea.py::test_phase_correction_matches_formula_with_known_lower_bits PASSED [ 29%]
+test_ipea.py::test_energy_alias_selects_unique_value_inside_interval PASSED [ 32%]
+test_ipea.py::test_energy_alias_raises_when_interval_has_no_candidate PASSED [ 35%]
+test_ipea.py::test_h2_reference_uses_project_hamiltonian_and_time PASSED [ 37%]
+test_ipea.py::test_expected_one_bit_ipea_distribution PASSED             [ 40%]
+test_ipea.py::test_expected_two_bit_distribution_uses_feedback_convention PASSED [ 43%]
+test_ipea.py::test_two_bit_measurement_order_reconstructs_phase_prefix PASSED [ 45%]
+test_ipea.py::test_adaptive_distribution_matches_existing_two_bit_reference PASSED [ 48%]
+test_ipea.py::test_five_bit_dyadic_adaptive_distribution_is_deterministic PASSED [ 51%]
+test_ipea.py::test_five_bit_modal_phase_resolves_energy_on_explicit_ground_branch PASSED [ 54%]
+test_state_prep.py::test_ry_matrix_is_unitary PASSED                     [ 56%]
+test_state_prep.py::test_ry_zero_angle_is_identity PASSED                [ 59%]
+test_state_prep.py::test_cnot_matches_truth_table PASSED                 [ 62%]
+test_state_prep.py::test_compute_theta_recovers_known_angle PASSED       [ 64%]
+test_state_prep.py::test_compute_theta_preserves_sign_of_b PASSED        [ 67%]
+test_state_prep.py::test_full_circuit_reproduces_e0_ground_state PASSED  [ 70%]
+test_state_prep.py::test_produced_state_is_normalized PASSED             [ 72%]
+test_state_prep.py::test_produced_state_has_zero_amplitude_on_01_and_10 PASSED [ 75%]
+test_time_evolution.py::test_hamiltonian_is_hermitian PASSED             [ 78%]
+test_time_evolution.py::test_eigenvalues_match_known_e0 PASSED           [ 81%]
+test_time_evolution.py::test_U_of_t_is_unitary_for_various_t PASSED      [ 83%]
+test_time_evolution.py::test_U_of_zero_is_identity PASSED                [ 86%]
+test_time_evolution.py::test_U_power_matches_repeated_multiplication PASSED [ 89%]
+test_time_evolution.py::test_controlled_U_is_unitary_and_block_structured PASSED [ 91%]
+test_time_evolution.py::test_choose_evolution_time_avoids_aliasing PASSED [ 94%]
+test_time_evolution.py::test_choose_evolution_time_rejects_degenerate_spectrum PASSED [ 97%]
+test_time_evolution.py::test_term_matrix_known_cases PASSED              [100%]
+
+============================== warnings summary ===============================
+venv\Lib\site-packages\guppylang_internals\std\_internal\compiler\tket_exts.py:26
+  C:\SG-Grand-Challenge\venv\Lib\site-packages\guppylang_internals\std\_internal\compiler\tket_exts.py:26: DeprecationWarning: QSystemExtension (tket.qsystem) is deprecated. Use QSystemHeliosExtension (tket.qsystem.helios) or QSystemSolExtension (tket.qsystem.sol) instead.
+    QSYSTEM_EXTENSION = qsystem()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 37 passed, 1 warning in 2.33s ========================

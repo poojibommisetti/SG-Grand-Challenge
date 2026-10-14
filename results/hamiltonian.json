@@ -1,0 +1,14 @@
+{
+  "bond_length_angstrom": 0.73486,
+  "basis": "sto-3g",
+  "hf_energy_hartree": -1.1170050727348833,
+  "fci_energy_hartree": -1.1373060511988453,
+  "pauli_coefficients_hartree": {
+    "I": -0.3322371935093348,
+    "Z0": 0.39802446432334593,
+    "Z1": 0.398024464323346,
+    "Z0 Z1": 0.011281049421144163,
+    "X0 X1": 0.1809233927385484
+  },
+  "matches_arxiv_2306_16608": true
+}

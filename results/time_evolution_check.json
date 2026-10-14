@@ -1,0 +1,13 @@
+{
+  "eigenvalues_hartree": [
+    -1.1373060511988444,
+    -0.5244416356690274,
+    -0.16259485019193054,
+    0.49539376302246313
+  ],
+  "evolution_time": 3.4635067188751005,
+  "margin_used": 0.9,
+  "n_bits_checked": 5,
+  "all_powers_unitary": true,
+  "note": "U(t)^(2^k) verified as an exact unitary via spectral decomposition; Guppy/Selene synthesis is exposed separately by selene_smoke_test()."
+}
